@@ -27,6 +27,10 @@ curl -d '{"tasks": [{"code_name": "hello", "payload": "{\"foo\": \"bar\"}"}]}' -
 And here's the same thing using Ruby:
 
 ```ruby
-
+require 'iron_worker_ng'
+client = IronWorkerNG::Client.new()
+client.tasks.create(
+    'hello', {ruby_foo: "bar"}
+)
 ```
 
