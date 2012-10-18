@@ -21,7 +21,7 @@ $ iron_worker upload https://github.com/treeder/hello_worker/blob/master/hello.w
 
 ### 2. Start using it!
 
-You can queue up tasks for it in any language. Check out our [Client Libraries](http://dev.iron.io/)
+You can queue up tasks for it in any language. Check out our [Client Libraries](http://dev.iron.io/worker/)
 in the language of your choice to make it easy, but here's an example using curl:
 
 ```
