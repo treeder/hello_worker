@@ -12,7 +12,7 @@ Here's how to use it.
 From the command line:
 
 ```
-$ iron_worker upload ...../hello.worker`
+$ iron_worker upload https://github.com/treeder/hello_worker/blob/master/hello.worker
 ```
 
 ### 2. Start using it!
