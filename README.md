@@ -5,7 +5,11 @@ The simplest IronWorker.
 
 ## Quick Start
 
-Here's how to use it.
+First off, you need an [Iron.io](http://www.iron.io) account, if you don't have one go sign up for a free account.
+
+Second, you need to have your [iron.json file setup](http://dev.iron.io/worker/reference/configuration/).
+
+Now you can get cracking!
 
 ### 1. Add this worker to your account
 
