@@ -13,6 +13,12 @@ Now you can get cracking!
 
 ### 1. Add this worker to your account
 
+First install the iron_worker_ng gem:
+
+```
+$ gem install iron_worker_ng
+```
+
 From the command line:
 
 ```
