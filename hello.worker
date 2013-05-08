@@ -1,8 +1,3 @@
-# INPUTS:
-=begin
-NONE
-=end
-
 runtime 'ruby'
 
-exec 'hello_worker.rb'
+exec 'hello.rb'
