@@ -28,7 +28,13 @@ $ iron_worker upload https://github.com/treeder/hello_worker/blob/master/hello.w
 ### 2. Start using it!
 
 You can queue up tasks for it in any language. Check out our [Client Libraries](http://dev.iron.io/worker/)
-in the language of your choice to make it easy, but here's an example using curl:
+in the language of your choice to make it easy, but here's an example using the cli:
+
+```
+iron_worker queue hello --payload '{"hello": "world!"}' --wait
+```
+
+or with curl:
 
 ```
 $ curl -d '{"tasks": [{"code_name": "hello", "payload": "{\"foo\": \"bar\"}"}]}' --header "Authorization: OAuth YOUR_TOKEN" --header "Content-Type: application/json" https://worker-aws-us-east-1.iron.io/2/projects/YOUR_PROJECT_ID/tasks
