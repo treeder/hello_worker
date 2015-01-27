@@ -2,6 +2,8 @@
 
 require 'iron_worker_ng'
 client = IronWorkerNG::Client.new()
-client.tasks.create(
-    'hello', {ruby_foo: "bar"}
-)
+10.times do |i|
+  client.tasks.create(
+      'hello', {foo: "bar", i: i}
+  )
+end

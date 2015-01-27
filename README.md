@@ -42,7 +42,7 @@ $ curl -d '{"tasks": [{"code_name": "hello", "payload": "{\"foo\": \"bar\"}"}]}'
 
 Now go look at [HUD](http://hud.iron.io) to see the task and the log.
 
-And here's how to queue up tasks using Ruby (from enqueue.rb):
+And here's how to queue up tasks using Ruby (see `enqueue.rb` to run a bunch):
 
 ```ruby
 require 'iron_worker_ng'
@@ -53,4 +53,3 @@ client.tasks.create(
 ```
 
 For clients in other languages, see the [Iron.io Dev Center](http://dev.iron.io).
-
