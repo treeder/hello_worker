@@ -1,3 +1,0 @@
-runtime 'ruby'
-
-exec 'hello.rb'

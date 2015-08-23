@@ -1,3 +1,4 @@
-puts "Hello Worker #{params[:i]}"
+require_relative 'bundle/bundler/setup'
+require 'iron_worker'
 
-puts "Here is the payload: " + params.inspect
+puts "Hello #{IronWorker.payload['name'] || "World"}!"

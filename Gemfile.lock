@@ -1,0 +1,29 @@
+GIT
+  remote: https://github.com/iron-io/iron_worker_ruby.git
+  revision: d39743644e958c81ad9c91f553798de10c803362
+  specs:
+    iron_worker (3.2.0)
+      iron_core (>= 0.5.1)
+      json (> 1.8.1)
+      rest (>= 3.0.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    iron_core (1.0.9)
+      rest (>= 3.0.4)
+    json (1.8.3)
+    net-http-persistent (2.9.4)
+    netrc (0.10.3)
+    rest (3.0.6)
+      net-http-persistent (>= 2.9.1)
+      netrc
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  iron_worker!
+
+BUNDLED WITH
+   1.10.5
