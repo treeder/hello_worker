@@ -23,10 +23,7 @@ You can just use this worker directly by queuing up a job for treeder/hello_work
 First, vendor the dependencies:
 
 ```sh
-docker run --rm -it -v $PWD:/worker -w /worker iron/ruby-bundle bundle update
-docker run --rm -it -v $PWD:/worker -w /worker iron/ruby-bundle bundle install --standalone --clean
-sudo chmod -R a+rw .bundle
-sudo chmod -R a+rw bundle
+docker run --rm -v $PWD:/app -w /app treeder/bundle
 ```
 
 Now build the image:
@@ -38,7 +35,7 @@ docker build -t treeder/hello_worker:latest .
 And test it:
 
 ```sh
-docker run --rm -v $PWD:/iron treeder/hello_worker -payload /iron/payload.json
+docker run --rm -e "PAYLOAD_FILE=/iron/payload.json" -v $PWD:/iron treeder/hello_worker
 ```
 
 Sweet, it works!  We mount /iron directory so the payload is available and we don't set the working directory on docker run
@@ -58,7 +55,7 @@ You can queue up tasks for it in any language. Check out our [Client Libraries](
 in the language of your choice to make it easy, but here's an example using the cli:
 
 ```
-iron worker queue treeder/hello_worker --payload '{"name": "Travis"}' --wait
+iron worker queue --payload '{"name": "Travis"}' --wait treeder/hello_worker
 ```
 
 or with curl:
